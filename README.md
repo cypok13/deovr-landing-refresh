@@ -2,7 +2,7 @@
 
 A modern, premium, conversion-focused refresh of the [DeoVR player download page](https://deovr.com/app), built as an **AI Design Challenge** entry.
 
-**Live demo:** _see the link attached with this submission_
+**Live demo:** https://deovr-landing-refresh.vercel.app
 
 ## What this is
 
