@@ -169,7 +169,7 @@
     }
     function onScroll(){
       apply(window.pageYOffset > 8);
-      // hide the fixed header once the CTA ("Don't think twice") reaches the top
+      // hide the fixed header once the download CTA reaches the top
       if (dlSection){ setHidden(dlSection.getBoundingClientRect().top < 90); }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
