@@ -139,6 +139,15 @@
   }
   .deo-navbtn:focus-visible{ outline:2px solid #7FD4F2; outline-offset:2px; }
   .deo-cta a:focus-visible{ outline:3px solid rgba(63,184,227,.65); outline-offset:3px; }
+
+  /* mobile fit-ups: download buttons + filename field */
+  @media (max-width: 560px){
+    .dl-card{ padding:30px 22px 44px !important; }
+    .dl-primary, .dl-secondary{ justify-content:center !important; gap:9px !important; padding:17px 14px !important; font-size:16px !important; flex-wrap:wrap; }
+    .dl-label{ white-space:nowrap; }
+    .ff-field{ padding:24px 20px 22px !important; }
+    .ff-namerow{ font-size:21px !important; flex-wrap:wrap !important; gap:14px 16px !important; }
+  }
 </style>
 <script defer src="hero-tilt.js"></script>
 </head>
@@ -445,7 +454,7 @@
         <!-- file field with parsed markers -->
         <div class="ff-field" style="margin-top:38px; max-width:524px; border:1px solid rgba(255,255,255,.12); border-radius:20px; background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); padding:28px 30px 26px;">
           <div style="font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#8A98AC; margin-bottom:22px;">You name the file</div>
-          <div style="display:flex; align-items:flex-start; gap:12px; font-family:'JetBrains Mono',monospace; font-size:30px; line-height:1; font-weight:500; color:#E7EEF6; letter-spacing:-.01em;">
+          <div class="ff-namerow" style="display:flex; align-items:flex-start; gap:12px; font-family:'JetBrains Mono',monospace; font-size:30px; line-height:1; font-weight:500; color:#E7EEF6; letter-spacing:-.01em;">
             <span style="flex:none; height:42px; display:flex; align-items:center;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7FD4F2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg></span>
             <span style="height:42px; display:flex; align-items:center;">Title</span>
             <div style="display:flex; flex-direction:column; align-items:center; gap:9px;">
@@ -632,9 +641,9 @@
         <div class="dl-card-actions" style="position:relative; z-index:1; flex:none; width:min(460px,46%); display:flex; flex-direction:column; gap:11px;">
           <!-- PRIMARY — Hyper Beta -->
           <button type="button" class="dl-primary" style="width:100%; display:flex; align-items:center; justify-content:flex-start; gap:12px; padding:20px 24px; border:0; border-radius:14px; background:linear-gradient(100deg,#3fc0ee 0%,#2f7cff 100%); color:#fff; font-size:18px; font-weight:800; letter-spacing:-.01em; cursor:pointer; box-shadow:0 0 0 1px rgba(150,228,255,.5) inset, 0 12px 32px rgba(45,124,255,.5), 0 0 64px rgba(63,184,227,.3); transition:box-shadow .3s ease, filter .25s ease, transform .15s ease;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16.5l-5-5h3v-8h4v8h3l-5 5zM5 19.5h14v2H5z"/></svg>
-            Download DeoVR Hyper
-            <span style="font-size:10.5px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; color:#1f5fd0; background:#eaf6ff; border-radius:999px; padding:3px 9px;">Beta</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="flex:none;"><path d="M12 16.5l-5-5h3v-8h4v8h3l-5 5zM5 19.5h14v2H5z"/></svg>
+            <span class="dl-label">Download DeoVR Hyper</span>
+            <span style="flex:none; font-size:10.5px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; color:#1f5fd0; background:#eaf6ff; border-radius:999px; padding:3px 9px;">Beta</span>
           </button>
           <!-- SECONDARY — standard build -->
           <button type="button" class="dl-secondary" style="width:100%; display:flex; align-items:center; justify-content:flex-start; gap:12px; padding:20px 24px; border:1px solid rgba(255,255,255,.13); border-radius:14px; background:rgba(255,255,255,.025); color:#E7EEF6; font-size:18px; font-weight:700; cursor:pointer;">
