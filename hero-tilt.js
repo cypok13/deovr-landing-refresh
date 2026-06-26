@@ -176,4 +176,19 @@
     onScroll();
   }
   setupHeader();
+
+  // Mobile hamburger menu: toggle the dropdown, sync aria, close on navigate/resize.
+  function setupBurger(){
+    var btn = document.getElementById('deo-burger');
+    var menu = document.getElementById('deo-menu');
+    if (!btn || !menu){ return setTimeout(setupBurger, 300); }
+    function close(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    btn.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    window.addEventListener('resize', function(){ if (window.innerWidth > 1024){ close(); } });
+  }
+  setupBurger();
 })();
