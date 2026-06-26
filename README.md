@@ -22,15 +22,6 @@ A single, self-contained marketing page for DeoVR — the free cross-platform VR
 - External resources: Google Fonts (Manrope, JetBrains Mono) and [Simple Icons](https://simpleicons.org/) CDN for headset logos.
 - Fully responsive (desktop / tablet / mobile), dark-theme native, with `:focus-visible` states for keyboard users.
 
-## Run locally
-
-No tooling required — just serve the folder over HTTP (needed so the video and assets load):
-
-```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
-```
-
 ## Structure
 
 ```
