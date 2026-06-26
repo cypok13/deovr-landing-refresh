@@ -146,7 +146,8 @@
     .dl-primary, .dl-secondary{ justify-content:center !important; gap:9px !important; padding:17px 14px !important; font-size:16px !important; flex-wrap:wrap; }
     .dl-label{ white-space:nowrap; }
     .ff-field{ padding:24px 20px 22px !important; }
-    .ff-namerow{ font-size:21px !important; flex-wrap:wrap !important; gap:14px 16px !important; }
+    .ff-namerow{ display:none !important; }
+    .ff-namerow-m{ display:flex !important; }
   }
 </style>
 <script defer src="hero-tilt.js"></script>
@@ -471,6 +472,31 @@
               <span style="box-sizing:border-box; height:42px; display:flex; align-items:center; border:1px solid transparent; color:#6A788C;">.mp4</span>
               <span style="width:1px; height:16px; background:rgba(138,152,172,.45);"></span>
               <span style="font-family:system-ui,sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.12em; color:#8A98AC;">EXTENSION</span>
+            </div>
+          </div>
+
+          <!-- mobile-only: filename on one line + a clean marker legend (no cramped connectors) -->
+          <div class="ff-namerow-m" style="display:none; flex-direction:column; gap:22px;">
+            <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-family:'JetBrains Mono',monospace; font-size:22px; line-height:1; font-weight:500; color:#E7EEF6; letter-spacing:-.01em;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FD4F2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>
+              <span>Title</span>
+              <span style="color:#7FD4F2; background:rgba(63,184,227,.14); border:1px solid rgba(63,184,227,.45); border-radius:8px; padding:3px 9px;">_SBS</span>
+              <span style="color:#7FD4F2; background:rgba(63,184,227,.14); border:1px solid rgba(63,184,227,.45); border-radius:8px; padding:3px 9px;">_180</span>
+              <span style="color:#6A788C;">.mp4</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:11px; border-top:1px solid rgba(255,255,255,.09); padding-top:20px;">
+              <div style="display:flex; align-items:center; gap:13px;">
+                <span style="flex:none; min-width:66px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:#7FD4F2; background:rgba(63,184,227,.14); border:1px solid rgba(63,184,227,.45); border-radius:8px; padding:6px 0;">_SBS</span>
+                <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8A98AC;">Format</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:13px;">
+                <span style="flex:none; min-width:66px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:#7FD4F2; background:rgba(63,184,227,.14); border:1px solid rgba(63,184,227,.45); border-radius:8px; padding:6px 0;">_180</span>
+                <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8A98AC;">Angle</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:13px;">
+                <span style="flex:none; min-width:66px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:#9CA9BA; border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:6px 0;">.mp4</span>
+                <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8A98AC;">Extension</span>
+              </div>
             </div>
           </div>
         </div>
